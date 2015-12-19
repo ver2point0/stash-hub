@@ -1,7 +1,8 @@
 # Stash hub
 
 ## Summary
-Stash hub is your place to collect the things centered around you.
+Stash hub is your place to collect the things you find most interesting and vote on your favorites.
+
 
 
 ## What's in your hub?!
