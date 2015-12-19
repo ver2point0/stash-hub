@@ -15,8 +15,9 @@
           .col-md-6
             .btn-group.pull-right
               = link_to like_stash_path(@stash), method: :put, class: "btn btn-default" do
-                %span.glyphicon.glyphicon-heart
+                %span.glyphicon.glyphicon-star
                   = @stash.get_upvotes.size
-              = link_to "Edit", edit_stash_path, class: "btn btn-primary" 
-              = link_to "Delete", stash_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+              - if user_signed_in? 
+                = link_to "Edit", edit_stash_path, class: "btn btn-primary" 
+                = link_to "Delete", stash_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
   

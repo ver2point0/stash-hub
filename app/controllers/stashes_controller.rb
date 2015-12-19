@@ -1,7 +1,7 @@
 class StashesController < ApplicationController
   
   before_action :find_stash, only: [:show, :edit, :update, :destroy, :upvote]
-  
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @stashes = Stash.all.order("created_at DESC")
   end
