@@ -1,6 +1,6 @@
 class StashesController < ApplicationController
   
-  before_action :find_stash, only: [:show, :edit, :update, :destroy]
+  before_action :find_stash, only: [:show, :edit, :update, :destroy, :upvote]
   
   def index
     @stashes = Stash.all.order("created_at DESC")
@@ -38,6 +38,11 @@ class StashesController < ApplicationController
   def destroy
     @stash.destroy
     redirect_to root_path
+  end
+  
+  def upvote
+    @stash.upvote_by current_user
+    redirect_to :back
   end
   
   private

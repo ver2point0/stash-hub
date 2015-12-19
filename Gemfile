@@ -27,8 +27,10 @@ group :development do
   gem 'spring'  
 end
 
-# User masonry rails
+# Use masonry rails
 gem 'masonry-rails'
+# Use acts_as_votable to vote
+gem 'acts_as_votable'
 # Use paperclip for adding images
 gem 'paperclip'
 # Use devise for authentication
