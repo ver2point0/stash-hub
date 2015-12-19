@@ -11,11 +11,11 @@ class StashesController < ApplicationController
   end
   
   def new
-    @stash = Stash.new
+    @stash = current_user.stashes.build
   end
   
   def create
-    @stash = Stash.new(stash_params)
+    @stash = current_user.stashes.build(stash_params)
     
     if @stash.save
       redirect_to @stash, notice: "Stash successfully created"

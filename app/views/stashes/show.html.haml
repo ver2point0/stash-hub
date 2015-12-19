@@ -1,6 +1,11 @@
 %h1= @stash.title
 %p= @stash.description
-
+%p
+  Submitted by
+  = @stash.user.email
+  
+%br/ 
+  
 = link_to "Back", root_path
 = link_to "Edit", edit_stash_path
 = link_to "Delete", stash_path, method: :delete, data: { confirm: "Are you sure?" }
