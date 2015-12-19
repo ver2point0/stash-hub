@@ -24,6 +24,20 @@ class StashesController < ApplicationController
     end
   end
   
+  def edit
+  end
+  
+  def update
+    if @stash.update(stash_params)
+      redirect_to @stash, notice: "Stash successfully updated"
+    else
+      render 'edit'
+    end
+  end
+  
+  def destroy
+  end
+  
   private
   
   def stash_params
