@@ -1,12 +1,19 @@
-= image_tag @stash.image.url(:medium)
-%h1= @stash.title
-%p= @stash.description
-%p
-  Submitted by
-  = @stash.user.email
+#stash_show.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-heading.stash_image
+        = image_tag @stash.image.url
+      .panel-body
+        %h1= @stash.title
+        %p.description= @stash.description
+      .panel-footer
+        .row
+          .col-md-6
+            %p.user
+            Submitted by
+            = @stash.user.email
+          .col-md-6
+            .btn-group.pull-right
+              = link_to "Edit", edit_stash_path, class: "btn btn-default" 
+              = link_to "Delete", stash_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
   
-%br/ 
-  
-= link_to "Back", root_path
-= link_to "Edit", edit_stash_path
-= link_to "Delete", stash_path, method: :delete, data: { confirm: "Are you sure?" }

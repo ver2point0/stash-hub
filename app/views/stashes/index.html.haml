@@ -1,3 +1,6 @@
-- @stashes.each do |stash|
-  = link_to (image_tag stash.image.url(:medium)), stash
-  %h2= link_to stash.title, stash
+#stashes.transitions-enabled
+  - @stashes.each do |stash|
+    .box.panel.panel-default
+      = link_to (image_tag stash.image.url), stash
+      .panel-body
+        %h2= link_to stash.title, stash

@@ -27,6 +27,8 @@ group :development do
   gem 'spring'  
 end
 
+# User masonry rails
+gem 'masonry-rails'
 # Use paperclip for adding images
 gem 'paperclip'
 # Use devise for authentication
