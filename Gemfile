@@ -27,6 +27,8 @@ group :development do
   gem 'spring'  
 end
 
+# Use paperclip for adding images
+gem 'paperclip'
 # Use devise for authentication
 gem 'devise'
 # Use SASS for Bootstrap

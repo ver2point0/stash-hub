@@ -43,7 +43,7 @@ class StashesController < ApplicationController
   private
   
   def stash_params
-    params.require(:stash).permit(:title, :description)
+    params.require(:stash).permit(:title, :description, :image)
   end
   
   def find_stash
