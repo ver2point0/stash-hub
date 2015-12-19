@@ -27,6 +27,8 @@ group :development do
   gem 'spring'  
 end
 
+# Use devise for authentication
+gem 'devise'
 # Use SASS for Bootstrap
 gem 'bootstrap-sass'
 # Use Simple form for easy forms
