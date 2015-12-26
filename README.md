@@ -10,3 +10,5 @@ Stash hub is your place to collect the things you find most interesting and vote
 ## What's in your hub?!
 
 The current version is deployed on Heroku: [Stash hub](http://stashhub.herokuapp.com/)
+
+[![ghit.me](https://ghit.me/badge.svg?repo=ver2point0/stash-hub)](https://ghit.me/repo/ver2point0/stash-hub)
